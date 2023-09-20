@@ -1,0 +1,10 @@
+C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\bin\Debug\wfa_pong.exe.config
+C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\bin\Debug\wfa_pong.exe
+C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\bin\Debug\wfa_pong.pdb
+C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\Debug\wfa_pong.csproj.AssemblyReference.cache
+C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\Debug\wfa_pong.Form1.resources
+C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\Debug\wfa_pong.Properties.Resources.resources
+C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\Debug\wfa_pong.csproj.GenerateResource.cache
+C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\Debug\wfa_pong.csproj.CoreCompileInputs.cache
+C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\Debug\wfa_pong.exe
+C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\Debug\wfa_pong.pdb

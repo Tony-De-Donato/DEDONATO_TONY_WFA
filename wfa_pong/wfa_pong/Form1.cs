@@ -15,7 +15,16 @@ namespace wfa_pong
         public Form1()
         {
             InitializeComponent();
+
         }
 
+        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            label1.Text = "0";
+
+        }
     }
 }
