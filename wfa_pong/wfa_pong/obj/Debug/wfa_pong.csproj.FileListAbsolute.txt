@@ -8,3 +8,4 @@ C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\De
 C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\Debug\wfa_pong.exe
 C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\Debug\wfa_pong.pdb
 C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\Debug\wfa_pong.Tong.resources
+C:\Users\tonyd\Desktop\projet_wfa\WFA\DEDONATO_TONY_WFA\wfa_pong\wfa_pong\obj\Debug\wfa_pong.Options.resources

@@ -302,7 +302,7 @@
             this.MinimumSize = new System.Drawing.Size(1045, 579);
             this.Name = "Tong";
             this.Text = "Tong";
-            this.Load += new System.EventHandler(this.Tong_Load);
+            
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tong_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Tong_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.leftPlayer)).EndInit();
