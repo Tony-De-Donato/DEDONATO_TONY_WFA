@@ -45,11 +45,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.endGamePanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.restartBtn2 = new System.Windows.Forms.Button();
+            this.leaveBtn2 = new System.Windows.Forms.Button();
+            this.endGameText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.leftPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.theBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tongLogo)).BeginInit();
             this.pauseMenuCtn.SuspendLayout();
+            this.endGamePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftPlayer
@@ -186,6 +191,7 @@
             this.leaveBtn.TabStop = false;
             this.leaveBtn.Text = "Quitter";
             this.leaveBtn.UseVisualStyleBackColor = true;
+            this.leaveBtn.Click += new System.EventHandler(this.leaveBtn_Click);
             // 
             // label1
             // 
@@ -224,11 +230,63 @@
             this.label3.Text = "Auto = M\r\nManual  = Up/Down arrows\r\n";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // endGamePanel
+            // 
+            this.endGamePanel.AutoSize = true;
+            this.endGamePanel.BackColor = System.Drawing.Color.Transparent;
+            this.endGamePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.endGamePanel.Controls.Add(this.endGameText);
+            this.endGamePanel.Controls.Add(this.restartBtn2);
+            this.endGamePanel.Controls.Add(this.leaveBtn2);
+            this.endGamePanel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.endGamePanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.endGamePanel.Location = new System.Drawing.Point(458, 155);
+            this.endGamePanel.Name = "endGamePanel";
+            this.endGamePanel.Size = new System.Drawing.Size(112, 135);
+            this.endGamePanel.TabIndex = 14;
+            this.endGamePanel.TabStop = true;
+            this.endGamePanel.Visible = false;
+            // 
+            // restartBtn2
+            // 
+            this.restartBtn2.Location = new System.Drawing.Point(3, 43);
+            this.restartBtn2.Name = "restartBtn2";
+            this.restartBtn2.Size = new System.Drawing.Size(102, 37);
+            this.restartBtn2.TabIndex = 0;
+            this.restartBtn2.TabStop = false;
+            this.restartBtn2.Text = "Restart";
+            this.restartBtn2.UseVisualStyleBackColor = true;
+            this.restartBtn2.Click += new System.EventHandler(this.restartBtn2_Click);
+            // 
+            // leaveBtn2
+            // 
+            this.leaveBtn2.Location = new System.Drawing.Point(3, 86);
+            this.leaveBtn2.Name = "leaveBtn2";
+            this.leaveBtn2.Size = new System.Drawing.Size(101, 42);
+            this.leaveBtn2.TabIndex = 2;
+            this.leaveBtn2.TabStop = false;
+            this.leaveBtn2.Text = "Quitter";
+            this.leaveBtn2.UseVisualStyleBackColor = true;
+            this.leaveBtn2.Click += new System.EventHandler(this.leaveBtn2_Click);
+            // 
+            // endGameText
+            // 
+            this.endGameText.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.endGameText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.endGameText.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.endGameText.Location = new System.Drawing.Point(3, 0);
+            this.endGameText.Name = "endGameText";
+            this.endGameText.Size = new System.Drawing.Size(102, 40);
+            this.endGameText.TabIndex = 3;
+            this.endGameText.Text = "Left player\r\n win !!!";
+            this.endGameText.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Tong
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1027, 532);
+            this.Controls.Add(this.endGamePanel);
             this.Controls.Add(this.pauseMenuCtn);
             this.Controls.Add(this.theBall);
             this.Controls.Add(this.rightPlayer);
@@ -252,6 +310,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.theBall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tongLogo)).EndInit();
             this.pauseMenuCtn.ResumeLayout(false);
+            this.endGamePanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,6 +333,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.FlowLayoutPanel endGamePanel;
+        private System.Windows.Forms.Button restartBtn2;
+        private System.Windows.Forms.Button leaveBtn2;
+        private System.Windows.Forms.Label endGameText;
     }
 }
 

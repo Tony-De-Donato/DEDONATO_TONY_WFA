@@ -104,9 +104,17 @@ namespace wfa_pong
             // Move player down
             if (playerDetectedDown == true && leftPlayer.Top < bottomBoundary) { leftPlayer.Top += 10; }
             // Check for left player win
-            if (playerScore >= 10) { theTimer.Stop(); }
+            if (playerScore >= 2) { 
+                theTimer.Stop();
+                endGamePanel.Visible = true;
+                endGameText.Text = "Left player \r\nwin !!!";
+            }
             // Check for right player / CPU win
-            if (cpuScore >= 10) { theTimer.Stop(); }
+            if (cpuScore >= 2) { 
+                theTimer.Stop();
+                endGamePanel.Visible = true;
+                endGameText.Text = "Right player \r\nwin !!!";
+            }
         }
 
         private void Tong_KeyUp(object sender, KeyEventArgs e)
@@ -170,14 +178,24 @@ namespace wfa_pong
 
         private void restartBtn_Click(object sender, EventArgs e)
         {
+            restartGame();
+        }
+
+        private void restartBtn2_Click(object sender, EventArgs e)
+        {
+            restartGame();
+        }
+
+        void restartGame()
+        {
             // Reset the game
-            
             spaceBarClicked = 0;
             playerScore = 0;
             cpuScore = 0;
             scoreLeft.Text = "0";
             scoreRight.Text = "0";
-            pauseMenuCtn.Visible = false;
+            pauseMenuCtn.Visible = false; 
+            endGamePanel.Visible = false;
             theBall.Left = xMidpoint;
             theBall.Top = yMidpoint;
             ballXCoordinate = 10;
@@ -186,10 +204,16 @@ namespace wfa_pong
             rightPlayer.Top = yMidpoint;
             theTimer.Start();
             Focus();
-            
-
         }
 
-        
+        private void leaveBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void leaveBtn2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
