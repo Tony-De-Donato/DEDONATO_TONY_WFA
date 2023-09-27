@@ -46,9 +46,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.endGamePanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.endGameText = new System.Windows.Forms.Label();
             this.restartBtn2 = new System.Windows.Forms.Button();
             this.leaveBtn2 = new System.Windows.Forms.Button();
-            this.endGameText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.leftPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.theBall)).BeginInit();
@@ -247,6 +247,18 @@
             this.endGamePanel.TabStop = true;
             this.endGamePanel.Visible = false;
             // 
+            // endGameText
+            // 
+            this.endGameText.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.endGameText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.endGameText.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.endGameText.Location = new System.Drawing.Point(3, 0);
+            this.endGameText.Name = "endGameText";
+            this.endGameText.Size = new System.Drawing.Size(102, 40);
+            this.endGameText.TabIndex = 3;
+            this.endGameText.Text = "Left player\r\n win !!!";
+            this.endGameText.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // restartBtn2
             // 
             this.restartBtn2.Location = new System.Drawing.Point(3, 43);
@@ -269,18 +281,6 @@
             this.leaveBtn2.UseVisualStyleBackColor = true;
             this.leaveBtn2.Click += new System.EventHandler(this.leaveBtn2_Click);
             // 
-            // endGameText
-            // 
-            this.endGameText.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.endGameText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.endGameText.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.endGameText.Location = new System.Drawing.Point(3, 0);
-            this.endGameText.Name = "endGameText";
-            this.endGameText.Size = new System.Drawing.Size(102, 40);
-            this.endGameText.TabIndex = 3;
-            this.endGameText.Text = "Left player\r\n win !!!";
-            this.endGameText.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // Tong
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -302,7 +302,6 @@
             this.MinimumSize = new System.Drawing.Size(1045, 579);
             this.Name = "Tong";
             this.Text = "Tong";
-            
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tong_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Tong_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.leftPlayer)).EndInit();

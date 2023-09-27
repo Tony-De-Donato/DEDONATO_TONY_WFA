@@ -1,0 +1,162 @@
+Projet WFA - PONG
+DE DONATO Tony
+
+================================================================
+
+Mercredi 20/09 :
+
+	Tâches réalisées : 
+
+		- Comprendre le fonctionnement de WFA
+		- Mettre en place un environnement de code adapté (vs entreprise + .net framework)
+		- Choix du jeu Pong
+		- Rédaction du planning prévisionnel
+
+	Problème(s) rencontré(s) :
+
+		- Beaucoup trop de temps passé sur la doc WFA
+
+	Remarque(s) : 
+		
+		X
+
+
+================================================================
+
+Jeudi 21/09 :
+
+	Tâches réalisées : 
+
+		- Création / setup du Git
+		- Se documenter sur le Pong
+		- Commencer à prévoir les taches à réaliser 
+		- Trouver des tuto 
+
+	Problème(s) rencontré(s) :
+
+		- trouver des "pistes" sans trouver un jeu déjà fait
+		
+
+	Remarque(s) : 
+		
+		- Le pong me semble un bon choix et plutôt facile à coder
+
+
+================================================================
+
+Vendredi 22/09 :
+
+	Tâches réalisées : 
+
+		- Création d'une interface avec le form designer
+		- Mise à jour du planning prévisionnel
+		
+
+	Problème(s) rencontré(s) :
+
+		- Penser à mettre des noms évident et conventionné aux éléments du design
+		- Perte du design car oubli de sauvegarde
+
+	Remarque(s) : 
+		
+		- Faire attention à la nomenclature
+		-
+
+
+================================================================
+
+Lundi 25/09 (+ week-end) :
+
+	Tâches réalisées : 
+
+		- Suivi d'un tuto youtube
+		- Déplacement de la balle fonctionnel
+		- Trouver des fonctionnalités suplémentaires
+
+	Problème(s) rencontré(s) :
+
+		- Déplacement de la balle sacadé et suivi par des pixels blancs
+		- Balle qui sort à moitié de l'écran lors des rebonds en haut et en bas
+		- déplacements de la balle toujours identiques
+
+	Remarque(s) / solution(s) : 
+		
+		- Ajouter un variable "top" et "bottom" à la balle car se base sur le milieu de cette dernière (donc sort de l'écran)
+		- La faire apparaitre à un endroit aléatoire au milieu de l'écran pour varier ses déplacements
+
+
+
+================================================================
+
+Mardi 26/09 :
+
+	Tâches réalisées : 
+
+		- Déplacements des paddles fonctionnel
+		- Possibilité de mettre sur pause 
+		- La balle rebondit sur les paddles
+		- Conditions de fin + écran de fin 
+		- possibilité de prendre le contrôle ou non de la paddle gauche (touche M et les flèches)
+
+	Problème(s) rencontré(s) :
+
+		- La balle rentre dans la paddle si elle touche le coté de celle-ci avant de toucher le mur (-_-)
+		
+
+	Remarque(s) : 
+		
+		- Il faut gérer la colision avec le coté de la paddle
+
+
+
+================================================================
+
+Mercredi 27/09 :
+
+	Tâches réalisées : 
+
+		- Commencer à commenter le code
+		- Menu pause + problème avec la pause après un restart
+		- Relancer le jeu
+
+	Problème(s) rencontré(s) :
+
+		- J'ai oublié le git et les push durant une partie du projet
+		- La touche de pause ne fontionnait plus après avoir relancé la partie 
+
+	Solution :
+
+		- Ajout d'un compteur aux click de la barre espace
+		- Reset du focus qui restait sur le bouton restart
+
+
+	Remarque(s) : 
+		
+		- Si j'ai le temps je reprendrais mon git et ferais des push en reprenant l'ordre basé sur mon journal de dev
+
+
+
+================================================================
+
+
+			RESTE A FAIRE :
+
+		
+	30% - menu options ==> nouveau form (l'implémenter au menu pause et si possible en début de jeu)
+	10% - gérer des options supplémentaire (difficulté, balle, son?, fond d'écran, ...)
+	0%  - ajouter des sons
+	20% - gérer la difficulté (potentiellement faire suivre la ball au cpu en mode autoplay mais en limitant sa vitesse)
+
+
+			Éventuellement :
+
+	- Faire un autre jeu 
+	- Refaire mon git
+	- 
+
+
+
+
+
+
+

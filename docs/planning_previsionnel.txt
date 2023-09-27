@@ -1,0 +1,65 @@
+Planning prévisionnel projet WFA.
+
+Fait le 20/09/23.
+
+nombre de séance totale :  7 demi-journées
+temps avant rendu : 11 jours
+
+
+Prévisions au 20/09 :
+
+ 	1 - se documenter sur les WFA,
+	    choisir un des jeux proposés,
+	    se documenter spécifiquement sur le jeu et mettre à jour le planning prévisionnel.
+	    (1 ou 2 séances, à terminer pour le 22/09)
+
+	2 - commencer à coder la base du jeu et faire des tests,
+	    trouver des fonctionnalitées à rajouter au jeu choisi.
+	    (week-end du 23 et 24)
+
+	3 - tenir a jour un journal de dev,
+	    commenter le code tout au long du projet,
+	    fournir un jeu globalement fonctionnel.
+	    (pour l'oral du 28/09, 3 séances disponibles)
+
+	4 - terminer les fonctionnalités supplémentaires,
+	    faire le readme,
+	    vérifier la conformité du git,
+	    review du code.
+	    (0 séance, 4 jours restants)
+
+
+
+Mise à jour au 22/09 :
+
+	Jeu choisi : Pong (renommé "Tong" suite à une idée d'Axel.B).
+	Beaucoup de références trouvées sur youtube (Shaun Halverson) et des forums
+
+	Définition des tâche pour le jeu de base :
+		- création de l'interface directement avec le from-designer (1/2 séance) 
+		- !Donner des noms évidents aux composants pour faciliter la rédaction du code par la suite.
+		- gérer le déplacement de la balle, rebondit dans la direction verticale oposée au mur haut et bas,
+		  ajoute 1 point au joueur à l'oposé du mur (droite ou gauche) lors de l'impact puis replace la balle. (1 séance)
+		- gérer le déplacement des paddle (1 manuelle et 1 auto), impossibilité de sortir de la fenêtre. (1/2 séance)
+		- gérer l'affichage pour ajouter des points, gagner ou perdre.(1/2 séance)
+	
+
+Mise à jour au 27/09 :
+
+	Fonctionnalités supplémentaires envisagées à l'heure actuelle :
+		- possibilité de mettre en pause
+		- menu pause 
+		- relancer une partie (l'implémenter au menu pause et en fin de jeu)
+		- quitter l'interface de jeu (l'implémenter au menu pause et en fin de jeu)
+		- prendre le contrôle de la paddle droite ou la remettre en auto
+		- menu options ==> nouveau form (l'implémenter au menu pause et si possible en début de jeu)
+		- gérer des options supplémentaire (difficulté, balle, son?, fond d'écran, ...)
+		- ajouter des sons
+	
+
+
+
+
+
+
+
