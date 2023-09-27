@@ -58,7 +58,7 @@ namespace wfa_pong
             theBall.Top -= ballYCoordinate;
             theBall.Left -= ballXCoordinate;
             // Make the CPU move
-            if (autoPlay == true) {    
+            if (autoPlay == true) {         
                 rightPlayer.Top += cpuDirection;
                 // Check if CPU has reached the top or the bottom
                 if (rightPlayer.Top < 0 || rightPlayer.Top > bottomBoundary) {
