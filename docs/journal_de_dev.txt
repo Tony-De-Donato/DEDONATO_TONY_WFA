@@ -1,6 +1,8 @@
 Projet WFA - PONG
 DE DONATO Tony
 
+Journal de Dev
+
 ================================================================
 
 Mercredi 20/09 :
@@ -152,7 +154,7 @@ Mercredi 27/09 :
 
 	- Faire un autre jeu 
 	- Refaire mon git
-	- 
+	- Implémenter d'autres fonctionnalités
 
 
 
