@@ -14,35 +14,35 @@ namespace wfa_pong
     {
         
         // Left Player Score
-        int playerScore = 0;
+        int leftPlayerScore = 0;
 
         // Right Player Score
-        int cpuScore = 0;
+        int rightPlayerScore = 0;
 
         // Paddle Speed
-        int cpuDirection = 5;
+        int rightPaddleDirection = 5;
 
         // Ball Speed
-        int ballXCoordinate = 10;
-        int ballYCoordinate = 10;
+        int ballXSpeed = 10;
+        int ballYSpeed = 10;
         
         // Size Variables
-        int bottomBoundary;
-        int centerPoint;
-        int xMidpoint;
-        int yMidpoint;
+        int windowBottom;
+        int windowCenter;
+        int horizontalMiddle;
+        int verticalMiddle;
 
         // Left Player Movement
-        bool playerDetectedUp;
-        bool playerDetectedDown;
+        bool leftPlayerDetectedUp;
+        bool leftPlayerDetectedDown;
 
         // Right Player Movement
         bool autoPlay;
-        bool cpuUp;
-        bool cpuDown;
+        bool rightPlayerDetectedUp;
+        bool rightPlayerDetectedDown;
 
         // Restart pause problem
-        int spaceBarClicked = 0;
+        int spaceBarCurrentState = 0;
 
 
 
@@ -52,9 +52,9 @@ namespace wfa_pong
             InitializeComponent();
 
             // get some necessary sizes and positions
-            bottomBoundary = ClientSize.Height - leftPlayer.Height;
-            xMidpoint = ClientSize.Width / 2;
-            yMidpoint = ClientSize.Height / 2;
+            windowBottom = ClientSize.Height - leftPlayer.Height;
+            horizontalMiddle = ClientSize.Width / 2;
+            verticalMiddle = ClientSize.Height / 2;
 
             // Get rid of the white pixels around the ball when it moves
             this.DoubleBuffered = true;
@@ -85,39 +85,39 @@ namespace wfa_pong
             Random newBallSpot = new Random();
             int newSpot = newBallSpot.Next(100, ClientSize.Height - 100);
             // Move the ball
-            theBall.Top -= ballYCoordinate;
-            theBall.Left -= ballXCoordinate;
+            theBall.Top -= ballYSpeed;
+            theBall.Left -= ballXSpeed;
             // Make the right paddle move automatically if autoPlay is true
             if (autoPlay == true) {         
-                rightPlayer.Top += cpuDirection;
+                rightPlayer.Top += rightPaddleDirection;
                 // Check if CPU has reached the top or the bottom
-                if (rightPlayer.Top < 0 || rightPlayer.Top > bottomBoundary) {
-                        cpuDirection = -cpuDirection; 
+                if (rightPlayer.Top < 0 || rightPlayer.Top > windowBottom) {
+                        rightPaddleDirection = -rightPaddleDirection; 
                     }
             } else // Make the right paddle move with users entry if autoPlay is false
             {
-                if (cpuUp == true && rightPlayer.Top > 0) { rightPlayer.Top -= 10; }
-                if (cpuDown == true && rightPlayer.Top < bottomBoundary) { rightPlayer.Top += 10; }
+                if (rightPlayerDetectedUp == true && rightPlayer.Top > 0) { rightPlayer.Top -= 10; }
+                if (rightPlayerDetectedDown == true && rightPlayer.Top < windowBottom) { rightPlayer.Top += 10; }
             }
             // Check if the ball hit the left wall
             if (theBall.Left < 0)
             {
                 // Reset the ball to the middle of the screen
-                theBall.Left = xMidpoint;
+                theBall.Left = horizontalMiddle;
                 // Randomize the ball's vertical position
                 theBall.Top = newSpot;
                 // Send the ball in the opposite direction
-                ballXCoordinate = -ballXCoordinate;
-                cpuScore++;
-                scoreRight.Text = cpuScore.ToString();
-                if (cpuScore >= 3 && cpuScore <= 7 && cpuScore >= playerScore )
+                ballXSpeed = -ballXSpeed;
+                rightPlayerScore++;
+                scoreRight.Text = rightPlayerScore.ToString();
+                if (rightPlayerScore >= 3 && rightPlayerScore <= 7 && rightPlayerScore >= leftPlayerScore )
                 {
                     // Increase the ball speed
-                    if (ballXCoordinate < 0) { ballXCoordinate = -15; } else { ballXCoordinate = 15; }
-                } else if (cpuScore >= 8)
+                    if (ballXSpeed < 0) { ballXSpeed = -15; } else { ballXSpeed = 15; }
+                } else if (rightPlayerScore >= 8)
                 {
                     // Increase the ball speed again
-                    if (ballXCoordinate < 0) { ballXCoordinate = -20; } else { ballXCoordinate = 20; }
+                    if (ballXSpeed < 0) { ballXSpeed = -20; } else { ballXSpeed = 20; }
                 }
             }
 
@@ -125,45 +125,45 @@ namespace wfa_pong
             if (theBall.Left + theBall.Width > ClientSize.Width)
             {
                 // see above
-                theBall.Left = xMidpoint;
+                theBall.Left = horizontalMiddle;
                 theBall.Top = newSpot;
-                ballXCoordinate = -ballXCoordinate;
-                playerScore++;
-                scoreLeft.Text = playerScore.ToString();
-                if (playerScore >= 3 && playerScore <= 7 && playerScore >=cpuScore )
+                ballXSpeed = -ballXSpeed;
+                leftPlayerScore++;
+                scoreLeft.Text = leftPlayerScore.ToString();
+                if (leftPlayerScore >= 3 && leftPlayerScore <= 7 && leftPlayerScore >=rightPlayerScore )
                 {
                     // see above
-                    if (ballXCoordinate < 0) { ballXCoordinate = -15; } else { ballXCoordinate = 15; }
-                } else if (playerScore >= 8)
+                    if (ballXSpeed < 0) { ballXSpeed = -15; } else { ballXSpeed = 15; }
+                } else if (leftPlayerScore >= 8)
                 {
                     // see above
-                    if (ballXCoordinate < 0) { ballXCoordinate = -20; } else { ballXCoordinate = 20; }
+                    if (ballXSpeed < 0) { ballXSpeed = -20; } else { ballXSpeed = 20; }
                 }
             }
 
             // check if the ball hit the top or bottom wall and send it in the opposite direction
-            if (theBall.Top < 0 || theBall.Top + theBall.Height > ClientSize.Height) { ballYCoordinate = -ballYCoordinate; }
+            if (theBall.Top < 0 || theBall.Top + theBall.Height > ClientSize.Height) { ballYSpeed = -ballYSpeed; }
 
             // Check if the ball hits the left or right paddle
             if (theBall.Bounds.IntersectsWith(leftPlayer.Bounds) || theBall.Bounds.IntersectsWith(rightPlayer.Bounds))
             {
                 // Send ball opposite direction
-                ballXCoordinate = -ballXCoordinate;
+                ballXSpeed = -ballXSpeed;
             }
 
             // Move left player up
-            if (playerDetectedUp == true && leftPlayer.Top > 0) { leftPlayer.Top -= 10; }
+            if (leftPlayerDetectedUp == true && leftPlayer.Top > 0) { leftPlayer.Top -= 10; }
             // Move left player down
-            if (playerDetectedDown == true && leftPlayer.Top < bottomBoundary) { leftPlayer.Top += 10; }
+            if (leftPlayerDetectedDown == true && leftPlayer.Top < windowBottom) { leftPlayer.Top += 10; }
             // Check for left player win (win = 2 points)
-            if (playerScore >= 10) { 
+            if (leftPlayerScore >= 10) { 
                 // Stop the game, show the end game panel and display the winner
                 theTimer.Stop();
                 endGamePanel.Visible = true;
                 endGameText.Text = "Left player \r\nwin !!!";
             }
             // Check for right player / CPU win (win = 2 points)
-            if (cpuScore >= 10) {
+            if (rightPlayerScore >= 10) {
                 // Stop the game, show the end game panel and display the winner
                 theTimer.Stop();
                 endGamePanel.Visible = true;
@@ -175,12 +175,12 @@ namespace wfa_pong
         private void Tong_KeyUp(object sender, KeyEventArgs e)
                 {
                     // If left player releases the up or down arrow, stop moving the paddle
-                    if (e.KeyCode == Keys.Z) { playerDetectedUp = false; }
-                    if (e.KeyCode == Keys.S) { playerDetectedDown = false; }
+                    if (e.KeyCode == Keys.Z) { leftPlayerDetectedUp = false; }
+                    if (e.KeyCode == Keys.S) { leftPlayerDetectedDown = false; }
 
                     // If right player the up or down arrow, stop moving the paddle
-                    if (e.KeyCode == Keys.Up) { cpuUp = false; }
-                    if (e.KeyCode == Keys.Down) { cpuDown = false; }
+                    if (e.KeyCode == Keys.Up) { rightPlayerDetectedUp = false; }
+                    if (e.KeyCode == Keys.Down) { rightPlayerDetectedDown = false; }
                 }
 
 
@@ -188,9 +188,9 @@ namespace wfa_pong
         private void Tong_KeyDown(object sender, KeyEventArgs e)
         {
             // If left player presses the up arrow, move left paddle up
-            if (e.KeyCode == Keys.Z) { playerDetectedUp = true; }
+            if (e.KeyCode == Keys.Z) { leftPlayerDetectedUp = true; }
             // If player presses the down arrow, move left paddle down
-            if (e.KeyCode == Keys.S) { playerDetectedDown = true; }
+            if (e.KeyCode == Keys.S) { leftPlayerDetectedDown = true; }
 
             // If Player presses the M key, toggle auto play
             if (e.KeyCode == Keys.M)
@@ -201,12 +201,12 @@ namespace wfa_pong
             // If Player presses the up or down arrow, toggle manual play
             if (e.KeyCode == Keys.Up)
             {
-                cpuUp = true;
+                rightPlayerDetectedUp = true;
                 autoPlay = false;
             }   
             if (e.KeyCode == Keys.Down)
             {
-                cpuDown = true;
+                rightPlayerDetectedDown = true;
                 autoPlay = false;
             }
 
@@ -217,7 +217,7 @@ namespace wfa_pong
             if (e.KeyCode == Keys.Space)
             {
                 // If space bar is pressed an even number of times, pause the game
-                if (spaceBarClicked % 2 == 0)
+                if (spaceBarCurrentState % 2 == 0)
                 {
                     theTimer.Stop();
                     pauseInfo.Text = "Click SPACE to continue";
@@ -231,7 +231,7 @@ namespace wfa_pong
                 }
             }
             // Increment the space bar clicked counter by 1 (solved problem when retsart)
-            spaceBarClicked++;
+            spaceBarCurrentState++;
 
 
         }
@@ -254,19 +254,19 @@ namespace wfa_pong
         void restartGame()
         {
             // Reset the game
-            spaceBarClicked = 0;
-            playerScore = 0;
-            cpuScore = 0;
+            spaceBarCurrentState = 0;
+            leftPlayerScore = 0;
+            rightPlayerScore = 0;
             scoreLeft.Text = "0";
             scoreRight.Text = "0";
             pauseMenuCtn.Visible = false; 
             endGamePanel.Visible = false;
-            theBall.Left = xMidpoint;
-            theBall.Top = yMidpoint;
-            ballXCoordinate = 10;
-            ballYCoordinate = 10;
-            leftPlayer.Top = yMidpoint;
-            rightPlayer.Top = yMidpoint;
+            theBall.Left = horizontalMiddle;
+            theBall.Top = verticalMiddle;
+            ballXSpeed = 10;
+            ballYSpeed = 10;
+            leftPlayer.Top = verticalMiddle;
+            rightPlayer.Top = verticalMiddle;
             theTimer.Start();
             // Set the focus on the form, because its still on the restart button so space bar (pause) doesn't work
             Focus();
@@ -295,7 +295,7 @@ namespace wfa_pong
 
         private void optionProblem_Click(object sender, EventArgs e)
         {
-            spaceBarClicked = 0;
+            spaceBarCurrentState = 0;
             pauseInfo.Text = "Click SPACE to pause";
             optionProblem.Visible = false;
             pauseMenuCtn.Visible = false;

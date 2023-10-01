@@ -8,6 +8,7 @@ A simple Pong game implemented in C# using Windows Forms. This project demonstra
 - [Getting Started](#getting-started)
 - [Game Controls](#game-controls)
 - [Screenshots](#screenshots)
+- [Organisation](#organisation)
 - [Contributing / improvments](#contributing)
 - [License](#license)
 
@@ -54,6 +55,11 @@ To run this Pong game on your local machine, follow these steps:
 ## Screenshots
 
 ![Screenshot 1](wfa_pong/assets/Capture.PNG)
+
+## Organisation
+
+You can find the organisation of this project in the "docs" folder. There is a privisional planning, 
+a devloper journal and my powerpoint presentation.
 
 ## Contributing / improvements
 

@@ -140,6 +140,7 @@ Mercredi 27/09 :
 
 ================================================================
 
+A la date de l'oral (28/09) :
 
 			RESTE A FAIRE :
 
@@ -160,5 +161,28 @@ Mercredi 27/09 :
 
 
 
+================================================================
+
+Dimanche 01/10 :
+
+	Tâches réalisées : 
+
+		- Finalisation du Readme
+		- Menu options sans options
+		- Review d'un peu tous les fichier 
+
+	Problème(s) rencontré(s) :
+
+		- La touche option reste en focus et l'on ne peut plus continuer le jeu car la bar espace reste en focus
+
+	Solution :
+
+		- Ajout d'un bouton pour palier temporairement à ce problème. 
+
+
+	Remarque(s) : 
+		
+		- J'ai eu bcp de problème et de chose à faire ce week-end, j'aurais aimé créer des fonctionnalités plus poussées pour ce projet.
+		- +flemme j'avou
 
 

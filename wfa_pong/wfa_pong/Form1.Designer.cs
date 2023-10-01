@@ -35,7 +35,6 @@
             this.theBall = new System.Windows.Forms.PictureBox();
             this.scoreLeft = new System.Windows.Forms.Label();
             this.scoreRight = new System.Windows.Forms.Label();
-            this.tongLogo = new System.Windows.Forms.PictureBox();
             this.theTimer = new System.Windows.Forms.Timer(this.components);
             this.pauseInfo = new System.Windows.Forms.Label();
             this.pauseMenuCtn = new System.Windows.Forms.FlowLayoutPanel();
@@ -50,10 +49,10 @@
             this.restartBtn2 = new System.Windows.Forms.Button();
             this.leaveBtn2 = new System.Windows.Forms.Button();
             this.optionProblem = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.leftPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.theBall)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tongLogo)).BeginInit();
             this.pauseMenuCtn.SuspendLayout();
             this.endGamePanel.SuspendLayout();
             this.SuspendLayout();
@@ -116,15 +115,6 @@
             this.scoreRight.TabIndex = 4;
             this.scoreRight.Text = "0";
             this.scoreRight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tongLogo
-            // 
-            this.tongLogo.BackColor = System.Drawing.Color.Transparent;
-            this.tongLogo.Location = new System.Drawing.Point(426, 15);
-            this.tongLogo.Name = "tongLogo";
-            this.tongLogo.Size = new System.Drawing.Size(182, 103);
-            this.tongLogo.TabIndex = 5;
-            this.tongLogo.TabStop = false;
             // 
             // theTimer
             // 
@@ -289,23 +279,35 @@
             this.optionProblem.Name = "optionProblem";
             this.optionProblem.Size = new System.Drawing.Size(148, 94);
             this.optionProblem.TabIndex = 15;
-            this.optionProblem.Text = "Ya can\'t press space to continue ?\r\nI don\'t know why it appends ;)\r\nClick Me\r\n";
+            this.optionProblem.Text = "Ya can\'t press space to continue ?\r\nI don\'t know why either  ;)\r\nClick Me\r\n";
             this.optionProblem.UseVisualStyleBackColor = false;
             this.optionProblem.Visible = false;
             this.optionProblem.Click += new System.EventHandler(this.optionProblem_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Cyan;
+            this.label4.Location = new System.Drawing.Point(458, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(140, 50);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "TONG";
             // 
             // Tong
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1027, 532);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.optionProblem);
             this.Controls.Add(this.endGamePanel);
             this.Controls.Add(this.pauseMenuCtn);
             this.Controls.Add(this.theBall);
             this.Controls.Add(this.rightPlayer);
             this.Controls.Add(this.leftPlayer);
-            this.Controls.Add(this.tongLogo);
             this.Controls.Add(this.pauseInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -322,7 +324,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.leftPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.theBall)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tongLogo)).EndInit();
             this.pauseMenuCtn.ResumeLayout(false);
             this.endGamePanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -336,7 +337,6 @@
         private System.Windows.Forms.PictureBox rightPlayer;
         private System.Windows.Forms.Label scoreLeft;
         private System.Windows.Forms.Label scoreRight;
-        private System.Windows.Forms.PictureBox tongLogo;
         private System.Windows.Forms.Timer theTimer;
         private System.Windows.Forms.PictureBox theBall;
         private System.Windows.Forms.Label pauseInfo;
@@ -352,6 +352,7 @@
         private System.Windows.Forms.Button leaveBtn2;
         private System.Windows.Forms.Label endGameText;
         private System.Windows.Forms.Button optionProblem;
+        private System.Windows.Forms.Label label4;
     }
 }
 
