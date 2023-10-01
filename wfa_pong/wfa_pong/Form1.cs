@@ -62,6 +62,8 @@ namespace wfa_pong
             // set the auto play to true by default
             autoPlay = true;
         }
+
+
          private void Tong_Load(object sender, EventArgs e)
         {
             // ???
@@ -69,6 +71,8 @@ namespace wfa_pong
 
         }
         
+
+
         private void theTimer_Tick(object sender, EventArgs e)
         {
             // use the timer to loop the game
@@ -145,6 +149,7 @@ namespace wfa_pong
             }
         }
 
+
         private void Tong_KeyUp(object sender, KeyEventArgs e)
                 {
                     // If left player releases the up or down arrow, stop moving the paddle
@@ -155,6 +160,7 @@ namespace wfa_pong
                     if (e.KeyCode == Keys.Up) { cpuUp = false; }
                     if (e.KeyCode == Keys.Down) { cpuDown = false; }
                 }
+
 
 
         private void Tong_KeyDown(object sender, KeyEventArgs e)
@@ -208,17 +214,20 @@ namespace wfa_pong
 
         }
 
+
         private void restartBtn_Click(object sender, EventArgs e)
         {
             // obvious
             restartGame();
         }
 
+
         private void restartBtn2_Click(object sender, EventArgs e)
         {
             // obvious
             restartGame();
         }
+
 
         void restartGame()
         {
@@ -241,11 +250,13 @@ namespace wfa_pong
             Focus();
         }
 
+
         private void leaveBtn_Click(object sender, EventArgs e)
         {
             // obvious
             Application.Exit();
         }
+
 
         private void leaveBtn2_Click(object sender, EventArgs e)
         {
