@@ -49,6 +49,7 @@
             this.endGameText = new System.Windows.Forms.Label();
             this.restartBtn2 = new System.Windows.Forms.Button();
             this.leaveBtn2 = new System.Windows.Forms.Button();
+            this.optionProblem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.leftPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.theBall)).BeginInit();
@@ -282,11 +283,23 @@
             this.leaveBtn2.UseVisualStyleBackColor = true;
             this.leaveBtn2.Click += new System.EventHandler(this.leaveBtn2_Click);
             // 
+            // optionProblem
+            // 
+            this.optionProblem.Location = new System.Drawing.Point(441, 361);
+            this.optionProblem.Name = "optionProblem";
+            this.optionProblem.Size = new System.Drawing.Size(148, 94);
+            this.optionProblem.TabIndex = 15;
+            this.optionProblem.Text = "Ya can\'t press space to continue ?\r\nI don\'t know why it appends ;)\r\nClick Me\r\n";
+            this.optionProblem.UseVisualStyleBackColor = false;
+            this.optionProblem.Visible = false;
+            this.optionProblem.Click += new System.EventHandler(this.optionProblem_Click);
+            // 
             // Tong
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1027, 532);
+            this.Controls.Add(this.optionProblem);
             this.Controls.Add(this.endGamePanel);
             this.Controls.Add(this.pauseMenuCtn);
             this.Controls.Add(this.theBall);
@@ -338,6 +351,7 @@
         private System.Windows.Forms.Button restartBtn2;
         private System.Windows.Forms.Button leaveBtn2;
         private System.Windows.Forms.Label endGameText;
+        private System.Windows.Forms.Button optionProblem;
     }
 }
 

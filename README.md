@@ -58,6 +58,7 @@ To run this Pong game on your local machine, follow these steps:
 ## Contributing / improvements
 
 I may continue to improve this game in the future. Adding the option menu, a better AI, a better design, a better gameplay, etc...
+
 Contributions to this project are welcome! If you have any ideas for improvements, bug fixes, or new features, please open an issue or submit a pull request.
 
 ## License

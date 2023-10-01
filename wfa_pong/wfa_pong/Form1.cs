@@ -289,7 +289,18 @@ namespace wfa_pong
         private void optionsBtn_Click(object sender, EventArgs e)
         {
             optionsBtn.TabStop = false;
+            optionProblem.Visible = true;
             new Options().Show();
+        }
+
+        private void optionProblem_Click(object sender, EventArgs e)
+        {
+            spaceBarClicked = 0;
+            pauseInfo.Text = "Click SPACE to pause";
+            optionProblem.Visible = false;
+            pauseMenuCtn.Visible = false;
+            theTimer.Start();
+            Focus();
         }
     }
 }
