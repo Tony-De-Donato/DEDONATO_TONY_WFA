@@ -173,7 +173,7 @@ Dimanche 01/10 :
 
 	Problème(s) rencontré(s) :
 
-		- La touche option reste en focus et l'on ne peut plus continuer le jeu car la bar espace reste en focus
+		- La touche option reste en focus et l'on ne peut plus continuer le jeu car la barre espace reste en focus
 
 	Solution :
 
@@ -183,6 +183,6 @@ Dimanche 01/10 :
 	Remarque(s) : 
 		
 		- J'ai eu bcp de problème et de chose à faire ce week-end, j'aurais aimé créer des fonctionnalités plus poussées pour ce projet.
-		- +flemme j'avou
+		- +flemme j'avoue
 
 
