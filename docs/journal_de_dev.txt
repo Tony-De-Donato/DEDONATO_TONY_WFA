@@ -186,3 +186,16 @@ Dimanche 01/10 :
 		- +flemme j'avoue
 
 
+
+
+
+
+
+
+CONCLUSION : 
+
+Ce projet Pong a été une expérience très interressante de création d'un jeu classique en utilisant Windows Forms en C#. 
+Au fil du développement, j'ai rencontré et résolu divers défis liés au gameplay, à l'interface utilisateur et à l'interaction avec les utilisateurs. 
+Je suis particulièrement content de ma documentation sur ce projet.
+
+☺
