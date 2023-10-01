@@ -61,6 +61,10 @@ namespace wfa_pong
 
             // set the auto play to true by default
             autoPlay = true;
+
+            // Disable TabStop for the restartBtn and optionsBtn
+            restartBtn.TabStop = false;
+            optionsBtn.TabStop = false;
         }
 
 
@@ -106,6 +110,15 @@ namespace wfa_pong
                 ballXCoordinate = -ballXCoordinate;
                 cpuScore++;
                 scoreRight.Text = cpuScore.ToString();
+                if (cpuScore >= 3 && cpuScore <= 7 && cpuScore >= playerScore )
+                {
+                    // Increase the ball speed
+                    if (ballXCoordinate < 0) { ballXCoordinate = -15; } else { ballXCoordinate = 15; }
+                } else if (cpuScore >= 8)
+                {
+                    // Increase the ball speed again
+                    if (ballXCoordinate < 0) { ballXCoordinate = -20; } else { ballXCoordinate = 20; }
+                }
             }
 
             // Check if the ball hit the right wall
@@ -117,6 +130,15 @@ namespace wfa_pong
                 ballXCoordinate = -ballXCoordinate;
                 playerScore++;
                 scoreLeft.Text = playerScore.ToString();
+                if (playerScore >= 3 && playerScore <= 7 && playerScore >=cpuScore )
+                {
+                    // see above
+                    if (ballXCoordinate < 0) { ballXCoordinate = -15; } else { ballXCoordinate = 15; }
+                } else if (playerScore >= 8)
+                {
+                    // see above
+                    if (ballXCoordinate < 0) { ballXCoordinate = -20; } else { ballXCoordinate = 20; }
+                }
             }
 
             // check if the ball hit the top or bottom wall and send it in the opposite direction
@@ -134,14 +156,14 @@ namespace wfa_pong
             // Move left player down
             if (playerDetectedDown == true && leftPlayer.Top < bottomBoundary) { leftPlayer.Top += 10; }
             // Check for left player win (win = 2 points)
-            if (playerScore >= 2) { 
+            if (playerScore >= 10) { 
                 // Stop the game, show the end game panel and display the winner
                 theTimer.Stop();
                 endGamePanel.Visible = true;
                 endGameText.Text = "Left player \r\nwin !!!";
             }
             // Check for right player / CPU win (win = 2 points)
-            if (cpuScore >= 2) {
+            if (cpuScore >= 10) {
                 // Stop the game, show the end game panel and display the winner
                 theTimer.Stop();
                 endGamePanel.Visible = true;
@@ -262,6 +284,12 @@ namespace wfa_pong
         {
             // obvious
             Application.Exit();
+        }
+
+        private void optionsBtn_Click(object sender, EventArgs e)
+        {
+            optionsBtn.TabStop = false;
+            new Options().Show();
         }
     }
 }

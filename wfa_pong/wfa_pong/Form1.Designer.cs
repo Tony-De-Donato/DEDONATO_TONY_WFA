@@ -181,6 +181,7 @@
             this.optionsBtn.TabStop = false;
             this.optionsBtn.Text = "Options";
             this.optionsBtn.UseVisualStyleBackColor = true;
+            this.optionsBtn.Click += new System.EventHandler(this.optionsBtn_Click);
             // 
             // leaveBtn
             // 
@@ -240,7 +241,7 @@
             this.endGamePanel.Controls.Add(this.leaveBtn2);
             this.endGamePanel.Cursor = System.Windows.Forms.Cursors.Default;
             this.endGamePanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.endGamePanel.Location = new System.Drawing.Point(458, 155);
+            this.endGamePanel.Location = new System.Drawing.Point(458, 166);
             this.endGamePanel.Name = "endGamePanel";
             this.endGamePanel.Size = new System.Drawing.Size(112, 135);
             this.endGamePanel.TabIndex = 14;
@@ -301,6 +302,7 @@
             this.MaximumSize = new System.Drawing.Size(1045, 579);
             this.MinimumSize = new System.Drawing.Size(1045, 579);
             this.Name = "Tong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Tong";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tong_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Tong_KeyUp);

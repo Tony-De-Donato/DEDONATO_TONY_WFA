@@ -8,7 +8,7 @@ A simple Pong game implemented in C# using Windows Forms. This project demonstra
 - [Getting Started](#getting-started)
 - [Game Controls](#game-controls)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
+- [Contributing / improvments](#contributing)
 - [License](#license)
 
 ## Features
@@ -18,7 +18,8 @@ A simple Pong game implemented in C# using Windows Forms. This project demonstra
 - Pause and restart functionality.
 - Simple collision detection for the ball and paddles.
 - A basic end-game screen displaying the winner.
-- Restart feature.
+- Leave fonctionality.
+- Difficulty improving during the game.
 
 ## Getting Started
 
@@ -52,10 +53,11 @@ To run this Pong game on your local machine, follow these steps:
 
 ## Screenshots
 
-Insert screenshots of your game here to showcase its appearance and gameplay.
+![Screenshot 1](wfa_pong/assets/Capture.PNG)
 
-## Contributing
+## Contributing / improvements
 
+I may continue to improve this game in the future. Adding the option menu, a better AI, a better design, a better gameplay, etc...
 Contributions to this project are welcome! If you have any ideas for improvements, bug fixes, or new features, please open an issue or submit a pull request.
 
 ## License

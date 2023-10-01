@@ -29,7 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Options));
+            this.closeOptionPanel = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // closeOptionPanel
+            // 
+            this.closeOptionPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeOptionPanel.Location = new System.Drawing.Point(131, 507);
+            this.closeOptionPanel.Name = "closeOptionPanel";
+            this.closeOptionPanel.Size = new System.Drawing.Size(222, 71);
+            this.closeOptionPanel.TabIndex = 0;
+            this.closeOptionPanel.Text = "Retour au jeu";
+            this.closeOptionPanel.UseVisualStyleBackColor = true;
+            this.closeOptionPanel.Click += new System.EventHandler(this.closeOptionPanel_Click);
             // 
             // Options
             // 
@@ -38,17 +50,20 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(482, 703);
+            this.Controls.Add(this.closeOptionPanel);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Location = new System.Drawing.Point(1045, 0);
             this.MaximumSize = new System.Drawing.Size(500, 750);
             this.MinimumSize = new System.Drawing.Size(500, 750);
             this.Name = "Options";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Options";
-            this.Load += new System.EventHandler(this.Options_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button closeOptionPanel;
     }
 }
